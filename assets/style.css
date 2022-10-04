@@ -1,0 +1,620 @@
+/* 
+#E6C79C
+#CDDFA0
+#6FD08C
+#7B9EA8
+#B96AC9
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Glass card repurposed from W3Schools sample code*/
+.glass-card {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+
+.glass-card:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -20px;
+}
+
+.center-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: lemonmilk;
+  src: url("fnt/LEMONMILK-Regular.otf");
+}
+
+/* Styles for home, login and signup pages */
+
+#home #feature {
+  min-height: 70vh;
+  width: 100%;
+}
+
+#login,
+#signup,
+#home #feature {
+  animation: Waves 20s linear infinite;
+  background: radial-gradient(
+    #cddfa0 10%,
+    #6fd08c 35%,
+    #6fd08c 60%,
+    #cddfa0 80%
+  );
+  background-size: 400% 400%;
+}
+
+#login,
+#signup {
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+#home #feature h1 {
+  font-family: lemonmilk;
+  font-size: 144pt;
+  color: #333;
+  text-align: center;
+}
+
+#home #feature ul {
+  list-style: none;
+  padding: 40px 0;
+}
+
+#home #feature #buttons {
+  justify-content: space-around;
+}
+
+#home #feature li {
+  width: 40%;
+}
+
+.action-button {
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  font-family: lemonmilk;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px #000;
+  transition-duration: 0.2s;
+  display: inline-block;
+}
+
+#home #feature a {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.action-button:hover {
+  box-shadow: 0px 0px 3px #fff, 3px 3px 3px #333;
+  background-color: #b96ac9;
+  transition-duration: 0.2s;
+}
+
+@keyframes Waves {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 90% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+#home #info {
+  min-height: 30vh;
+  background-color: #333;
+}
+
+#home #info #cards {
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+  align-items: stretch;
+  height: 100%;
+  padding: 15px;
+  row-gap: 10px;
+}
+
+#home #info #cards > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+  color: #070707;
+  width: 25%;
+}
+
+#home #info #cards i {
+  display: inherit;
+  text-align: center;
+  font-size: 42pt;
+  padding: 20px;
+}
+
+#home #info #cards h1 {
+  font-family: lemonmilk;
+  font-size: 12pt;
+  padding: 10px;
+  text-align: center;
+}
+
+#home #info #cards p {
+  text-align: justify;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 11pt;
+}
+
+#home #info #cards > div:hover {
+  background-color: #efefef;
+  cursor: pointer;
+}
+
+#home #info #cards > div:hover i,
+#home #info #cards > div:hover h1 {
+  color: #b96ac9;
+}
+
+.form-page #content {
+  width: 100%;
+}
+
+.form-page form {
+  width: 20%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-page form h1 {
+  font-family: lemonmilk;
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+.form-page form a#back {
+  color: black;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.form-page form a:hover {
+  color: #b96ac9;
+  animation: none;
+}
+
+.form-page form .section {
+  margin-bottom: 20px;
+}
+
+.form-page form label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-page form input {
+  width: 100%;
+  padding: 8px;
+}
+
+.form-page form input[type="text"] {
+  margin-top: 10px;
+}
+
+.form-page form input[type="submit"] {
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px #222;
+}
+
+.form-page #signup-link {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 0 3px #222;
+  background-color: #7B9EA8;
+  margin-top: 10px;
+  color: white;
+  font-size: 11pt;
+  text-align: center;
+}
+
+/* ---------- Side menu styles ---------- */
+
+#sidemenu {
+  min-height: 100vh;
+  background-color: #6fd08c;
+  width: 20%;
+}
+
+#sidemenu #logo {
+  font-family: lemonmilk;
+  font-size: 42pt;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+#sidemenu #options {
+  padding: 20px;
+  list-style-type: none;
+}
+
+#sidemenu #options li {
+  padding: 10px 0;
+}
+
+#sidemenu i {
+  padding-right: 5px;
+}
+
+#sidemenu a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 13pt;
+  transition-duration: 0.3s;
+}
+
+#sidemenu a:hover {
+  color: #333;
+  transition-duration: 0.3s;
+}
+
+#sidemenu a:hover i {
+  color: #b96ac9;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  transition-duration: 0.3s;
+}
+
+/* ---------- Global dashboard styles ---------- */
+
+#page {
+  width: 80%;
+  padding: 20px;
+  background-color: #eee;
+  box-shadow: 0 0 6px #333;
+}
+
+#page h1#title {
+  font-family: lemonmilk;
+  text-align: center;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+#page h1#title i {
+  color: #b96ac9;
+}
+
+table.likes {
+  border-spacing: 0;
+}
+
+table.likes td:first-child{
+  background-color: #333;
+  color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+table.likes.active td:first-child{
+  background-color: #B96AC9;
+  color: white;
+}
+
+table.likes td:last-child{
+  background-color: white;
+  color: #333;
+  font-family: Verdana;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+table.likes .fa-thumbs-up, table.likes span {
+  padding: 10px;
+}
+
+table.likes a {
+  color: white;
+}
+
+.answer table.likes .fa-thumbs-up, .answer table.likes span {
+  padding: 5px;
+}
+
+/* ---------- Feed ---------- */
+
+#feed #questions-container, #search #search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.question-summary {
+  width: 49%;
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.question-summary h1 {
+  font-family: lemonmilk;
+  font-size: 15pt;
+}
+
+.question-summary h2 {
+  font-family: lemonmilk;
+  font-size: 11pt;
+  color: #666;
+}
+
+.question-summary p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px 0 10px 0;
+  font-size: 11pt;
+}
+
+.question-summary .action-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+
+/* ---------- Profile --------------- */
+
+#profile #profile-info {
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#profile #profile-info > div {
+  width: 40%;
+}
+
+#profile #profile-info h1 {
+  font-family: lemonmilk;
+  border-bottom: 2px solid black;
+  font-size: 14pt;
+}
+
+#profile #profile-info h2 {
+  font-size: 12pt;
+  font-family: lemonmilk;
+  width: 80%;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+#profile #profile-info .action-button {
+  width: 20%;
+  padding: 5px;
+  text-align: center;
+
+}
+
+/* ---------- Search --------------- */
+
+#search h2#no-results {
+  color: red;
+  font-family: lemonmilk;
+  padding: 50px;
+  text-align: center;
+  font-size: 12pt;
+}
+
+#search #search-box input[type="text"] {
+  width: 15%;
+  padding: 5px;
+  border-radius: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#search #search-box input[type="submit"] {
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #333;
+  color: white;
+}
+
+/* ---------- Ask --------------- */
+
+
+#ask-form {
+  width: 30%;
+  margin: 20px auto;
+  background-color: #6fd08c;
+  padding: 20px;
+}
+
+#ask-form label {
+  width: 100%;
+  display: block;
+  font-family: lemonmilk;
+  text-align: center;
+}
+
+#ask-form textarea {
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  margin: 10px 0;
+}
+
+#ask-form textarea {
+  resize: vertical;
+}
+
+
+#ask-form input[type="submit"] {
+  background-color: #ddd;
+  color: #333;
+  font-family: lemonmilk;
+  font-size: 14pt;
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+  border-radius: 50px;
+
+}
+
+
+/* ---------- Question --------------- */
+
+#question-details {
+  width: 100%;
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#question-details h1 {
+  font-family: lemonmilk;
+  font-size: 15pt;
+}
+
+#question-details h2, .answer h2 {
+  text-align: right;
+  font-family: Verdana;
+  font-size: 12pt;
+  font-style: italic;
+}
+
+#question-details p, .answer p {
+  font-family: Verdana;
+  padding: 10px 0;
+  text-align: justify;
+}
+
+#answers {
+  padding-top: 30px;
+}
+
+#answers h2 {
+  font-family: lemonmilk;
+}
+
+#answers .answer {
+  width: 80%;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+#answers #answer-form {
+  background-color: #6fd08c;
+  padding: 20px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start; 
+}
+
+#answers #answer-form textarea {
+  width: 78%;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+}
+
+#answers #answer-form input[type="submit"] {
+  width: 20%;
+  border-radius: 100px;
+  font-family: lemonmilk;
+  font-size: 11pt;
+  padding: 20px 0;
+}
+
+#question table.likes {
+  padding: 10px 0;
+}
+
+/* ---------- Mobile styles ---------- */
+
+@media all and (max-width: 960px) {
+  #home #info #cards > div {
+    width: 70%;
+  }
+
+  #login form {
+    width: 50%;
+  }
+
+  #sidemenu {
+    width: 30%;
+  }
+
+  #page {
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #home #info #cards > div {
+    width: 100%;
+  }
+
+  #home #feature h1 {
+    font-size: 56pt;
+  }
+
+  #login form {
+    width: 80%;
+  }
+
+  #sidemenu {
+    width: 100%;
+    min-height: max-content;
+    max-height: max-content;
+  }
+
+  #sidemenu li {
+    text-align: center;
+  }
+
+  #page {
+    width: 100%;
+  }
+}
